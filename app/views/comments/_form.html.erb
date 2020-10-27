@@ -1,16 +1,18 @@
-<h3>Post a Comment</h3>
+<h3 class="post_comment">Post a Comment</h3>
 
-<%= form_for [ @article, @comment ] do |f| %>
+<%= form_for [ @article, @comment ],:html=>{:class => 'submit-form'} do |f| %>
   <p>
-    <%= f.label :author_name,"Your Name" %><br/>
-    <%= f.text_field :author_name %>
+    <p class="text_label"><%= f.label :author_name,"Your Name" %></p>
+    
+    <%= f.text_field :author_name, :class => "author" %>
   </p>
   <p>
     <%= f.label :body %><br/>
-    <%= f.text_area :body %>
+    <br>
+    <%= f.text_area :body ,:class => "author" %>
   </p>
   <p>
-    <%= f.submit 'Submit' %>
+    <%= f.submit 'Submit' ,:class=> "buttons" %>
   </p>
 <% end %>
 

@@ -4,21 +4,28 @@
     <li><%= error %></li>
   <% end %>
   </ul>
-  <p>
-  <%= f.label :tag_list %><br />
-  <%= f.text_field :tag_list %>
-</p>
 
-  <p>
+<div class ="create_container">
+
+  
+  <h3 class="tags">
+    <%= f.label :tag_list %><br />
+    <%= f.text_field :tag_list %>
+  </h3>
+
+  <h3 class="title">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
-  </p>
-  <p>
+  </h3>
+
+  <h3 class="body">
     <%= f.label :body %><br />
     <%= f.text_area :body %>
-  </p>
-  <p>
+  </h3>
+  <p class="submit_button">
     <%= f.submit %>
   </p>
+
 <% end %>
+</div>
 
